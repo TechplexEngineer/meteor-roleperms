@@ -1,0 +1,44 @@
+<template name="userList">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>Username</th>
+				<th>Groups</th>
+				<th>Permissions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each users}}
+			<tr>
+				<td>{{this._id}}</td>
+				<td>{{this.username}}</td>
+				<td>
+					<ul>
+						{{#each this.groups}}
+							<li>{{this}}</li>
+						{{else}}
+							<li>None</li>
+						{{/each}}
+					</ul>
+				</td>
+				<td>
+					<ul>
+						{{#each this.permissions}}
+							<li>{{this}}</li>
+						{{else}}
+							<li>None</li>
+						{{/each}}
+					</ul>
+				</td>
+			</tr>
+			{{else}}
+			<tr>
+				<td>--None--</td>
+				<td>--None--</td>
+				<td>--None--</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</template>

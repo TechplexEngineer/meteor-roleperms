@@ -1,0 +1,38 @@
+<head>
+	<title>permissionsapp</title>
+</head>
+
+<body>
+	{{> header}}
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-6">
+				<h1>Users</h1>
+				{{> userList}}
+			</div>
+
+			<div class="col-md-6">
+				<h1>Groups</h1>
+				{{> groupList}}
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				{{> permToUser}}
+			</div>
+
+			<div class="col-md-4">
+				{{> createGroup}}
+			</div>
+
+			<div class="col-md-4">
+				{{> permToGroup}}
+			</div>
+		</div>
+
+	</div>
+
+</body>

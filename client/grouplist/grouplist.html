@@ -1,0 +1,31 @@
+<template name="groupList">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Group Name</th>
+				<th>Permissions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each groups}}
+			<tr>
+				<td>{{this.name}}</td>
+				<td>
+					<ul>
+						{{#each this.permissions}}
+							<li>{{this}}</li>
+						{{else}}
+							<li>None</li>
+						{{/each}}
+					</ul>
+				</td>
+			</tr>
+			{{else}}
+			<tr>
+				<td>--None--</td>
+				<td>--None--</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</template>
